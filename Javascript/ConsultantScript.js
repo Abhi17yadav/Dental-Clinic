@@ -47,7 +47,7 @@ function AgeValidation(){
     }
 };
 
-function Emailvalidation(){debugger
+function Emailvalidation(){
     var Email=$("#email").val();
     $(".error3").hide();
     var EmailReg = new RegExp("^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$");
@@ -104,13 +104,23 @@ function Appointvalidation(){
 }
 
 
-function validateForm(){
+function validateForm(){debugger
     let flag1=NameValidation();
     let flag2=AgeValidation();
     let flag3=Emailvalidation();
     let flag4=MobileValidation();
     let flag5=Appointvalidation();
-    return (flag1 && flag2  && flag3 && flag4 && flag5)
+    let output = (flag1 && flag2  && flag3 && flag4 && flag5)
+    if (output == false)
+    {
+        $(".Consultant-offered").height("860px");
+        return false;
+    }
+    else{
+        return true;
+    }
+
+
 }
 
 
