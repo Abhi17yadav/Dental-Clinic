@@ -104,7 +104,7 @@ function Appointvalidation(){
 }
 
 
-function validateForm(){debugger
+function validateForm(){
     let flag1=NameValidation();
     let flag2=AgeValidation();
     let flag3=Emailvalidation();
