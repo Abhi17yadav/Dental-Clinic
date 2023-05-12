@@ -6,14 +6,12 @@
     <title>Abhishek Dental Clinic</title>
     <link rel="stylesheet" href="../Css/Style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- <style>
-        /* Styling the Body element i.e. Color,
-        Font, Alignment */
-        body {
-            font-family: Verdana;
-            text-align: center;
-        }
-    </style> -->
+    <style>
+    .error{
+        color: red;
+    }
+    </style> 
+    
 </head>
 <body>
     <div class="width-100 top-header">
@@ -49,19 +47,19 @@
                     <div>
                         <h3>Provide your detail for appointment</h3>
                     </div>
-                    <form id="form">
+                    <form id="form" onsubmit="return validateForm()" action="Success.html">
                         <div class="form-control">
                             <label for="name" id="label-name">Full Name</label>
-                            <input type="text" id="Fullname" placeholder="Enter your full name" />
+                            <input type="text" id="Fullname" placeholder="Enter your full name"/>
                         </div>
                         <div class="form-control">
                             <label for="age" id="label-age">Age</label>
-                            <input type="text" id="age" placeholder="Enter your age" />
+                            <input type="text" id="age" placeholder="Enter your age"/>
                         </div>
                         <div class="form-control">
                             <label>Gender</label>
-                            <input type="radio" id="recommed-1" name="Gender">Male</input>
-                            <input type="radio" id="recommed-1" name="Gender">Female</input>
+                            <input type="radio" id="recommed-1" class="Gender" name="Gender">Male</input>
+                            <input type="radio" id="recommed-1" class="Gender">Female</input>
                         </div>
                         <div class="form-control">
                             <label for="email" id="label-email">Email</label>
@@ -134,3 +132,5 @@
     </div>
 </body>
 </html>
+<script src="../Javascript/Library/jquery-3.7.0.min.js"></script>
+<script src="../Javascript/ConsultantScript.js"></script>
